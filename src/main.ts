@@ -6,7 +6,7 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.useGlobalPipes(ValidationPipe)
+  app.useGlobalPipes(new ValidationPipe)
   app.setBaseViewsDir(join(__dirname, "..", '/views'));
   app.useStaticAssets(join(__dirname, "..", '/public'));
   app.setViewEngine('ejs');
