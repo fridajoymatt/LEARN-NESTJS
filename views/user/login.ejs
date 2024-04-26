@@ -1,0 +1,10 @@
+<%- include("../partials/header", {title: "Page de Connexion", style: "auth"}) %>
+
+    <h1>Page d'inscription</h1>
+    <form class="form" method="post" action="">
+            <%- include("../components/input", {type:"email", name:"email"}) %>
+                <%- include("../components/input", {type:"password", name:"password"}) %>
+                <br>
+                    <button type="submit">Inscription</button>
+    </form>
+    <%- include("../partials/footer") %>
